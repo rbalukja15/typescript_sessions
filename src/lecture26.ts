@@ -69,7 +69,7 @@ type Student = {
 let studentss: [Student, Student, Student] = [
     {
         studentId: 939412312,
-        name: 'Albioni',
+        name: null,
         age: 31,
         isEnrolled: true,
         grades: [10, 10, 10]
