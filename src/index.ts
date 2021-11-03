@@ -1,56 +1,17 @@
-const sum: Number = 0;
+import classes from "./lecture30";
 
-// Number type checking
-let count: Number = 0;
+const driver = new classes.Driver('John', 123456, 27, 'Smith');
 
-// String type checking
-let myName: string = 'test';
-myName = '';
-
-// Boolean type checking
-let myBoolean: boolean = false;
-myBoolean = true;
-
-// Array type checking
-const myArray: Number[] = [1,2,3];
-const secondArray: Array<number> = [1,2,3];
-const thirdArray: Array<string> = ['te', 'ststsas'];
-const fourthArray: Array<boolean> = [true, false];
-
-// Object type checking
-const jsObject = { name: 'mario' };
-const firstObject: { name: string, job: string, age: number } = { name: 'mario', job: 'developer', age: 31 };
+console.log(driver.getLicenseId)
 
 
-// Ushtrim 1
-// 1 objects: Student
-// Student -> studentId(number), name(string), surname(string), age(number), isEnrolled(boolean), grades(array of numbers)
-// Krijoni nje array of students(3), printoni notat per cdo student
+// Employee
+// name, surname, age(protected), salary(private), insuranceNr(private), amountEarned(private)
+// Implementoni klasen
+// Krijoni nje funksion, ku jepet si parameter nr i diteve te punuara ne muaj dhe rroga ditore
+// Kalkuloni pagen qe punonjesi do te marre ne muaj dhe bejeni assign tek amountEarned
+// Beni log amountEarned
 
-const students: Array<{ studentId: number; name: string; age: number, isEnrolled: boolean, grades: Array<number> }> = [
-    {
-        studentId: 12345,
-        name: 'Mario',
-        age: 31,
-        isEnrolled: true,
-        grades: [10, 10, 10]
-    },
-    {
-        studentId: 4359342,
-        name: 'Aldo',
-        age: 31,
-        isEnrolled: true,
-        grades: [10, 10, 10]
-    },
-    {
-        studentId: 939412312,
-        name: 'Albioni',
-        age: 31,
-        isEnrolled: true,
-        grades: [10, 10, 10]
-    }
-];
-
-students.forEach((student) => {
-    console.log(student.grades)
-})
+const employee = new classes.Employee('Antonio', 'Conte', 50, 10000, 12345678);
+employee.calculateAmountEarned(20, 50000);
+console.log(employee.getAmountEarned);

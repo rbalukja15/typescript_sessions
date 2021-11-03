@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "./node_modules/typescript/bin/tsc"
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "dev": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
