@@ -1,30 +1,6 @@
-import { IBook, Library } from './lecture32';
+import { Engineer, Teacher } from './abstract';
 
-const books: Array<IBook> = [
-    {
-        title: 'Meriylli',
-        author: 'Viktor Canosinaj',
-        nrPages: 300,
-        price: 1000,
-        isAvailable: true,
-    },
-    {
-        title: 'Mogli',
-        author: 'Viktor Canosinaj',
-        nrPages: 100,
-        price: 500,
-        isAvailable: true,
-    },
-    {
-        title: 'Da Vinci',
-        author: 'Viktor Canosinaj',
-        nrPages: 500,
-        price: 2000,
-        isAvailable: true,
-    },
-];
+const engineer = new Engineer('Mario', 'test@email.com', 'IT');
+const teacher = new Teacher('Mario', 'test@email.com', 'Node');
 
-const library = new Library('Qendrore', books, 'Tirane');
-
-library.buyBook('Da Vinciiii');
-console.log(library.getAmountEarned);
+engineer.responseObject(engineer.field);
