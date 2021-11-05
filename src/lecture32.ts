@@ -36,8 +36,11 @@ class Library {
     get getAmountEarned() { return this._amountEarned };
 
     public buyBook(title: string): void {
+        let isBookFound: boolean = false;
+
         this._books = this._books.map((book) => {
             if (book.isAvailable && book.title === title) {
+                isBookFound = true;
                 book.isAvailable = false;
                 this._amountEarned = Number(this._amountEarned) + Number(book.price);
 
@@ -47,6 +50,10 @@ class Library {
 
             return book;
         })
+
+        if (!isBookFound) {
+            console.log(`Book ${title} is not found`);
+        }
     }
 
     public loanBook(title: string): void {

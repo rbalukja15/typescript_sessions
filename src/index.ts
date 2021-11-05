@@ -26,8 +26,5 @@ const books: Array<IBook> = [
 
 const library = new Library('Qendrore', books, 'Tirane');
 
-library.buyBook('Da Vinci');
-console.log(library.getAmountEarned);
-
-library.buyBook('Da Vinci');
+library.buyBook('Da Vinciiii');
 console.log(library.getAmountEarned);
